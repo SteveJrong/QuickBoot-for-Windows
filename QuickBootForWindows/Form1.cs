@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using QuickBootForWindows.common;
 
 namespace QuickBootForWindows
 {
@@ -60,6 +61,45 @@ namespace QuickBootForWindows
         private void btnApplicationManager_Click(object sender, EventArgs e)
         {
             Process.Start("appwiz.cpl");
+        }
+
+        private void frmQuickStart_Load(object sender, EventArgs e)
+        {
+            string javaHomePath = Environment.GetEnvironmentVariable("JAVA_HOME");
+            this.tBJavaHomePath.Text = !String.IsNullOrEmpty(javaHomePath) ? javaHomePath : "未安装Java";
+
+            string mavenPathOne = Environment.GetEnvironmentVariable("MAVEN_HOME");
+            string mavenPathTwo = Environment.GetEnvironmentVariable("M2_HOME");
+            if (!string.IsNullOrEmpty(mavenPathOne))
+            {
+                this.tBMavenPath.Text = mavenPathOne;
+            }
+            else if (!string.IsNullOrEmpty(mavenPathTwo))
+            {
+                this.tBMavenPath.Text = mavenPathTwo;
+            }
+            else
+            {
+                this.tBMavenPath.Text = "未安装Maven";
+            }
+
+            string gradlePath = Environment.GetEnvironmentVariable("GRADLE_HOME");
+            this.tBGradlePath.Text = !String.IsNullOrEmpty(gradlePath) ? gradlePath : "未安装Gradle";
+        }
+
+        private void tBJavaHomePath_Click(object sender, EventArgs e)
+        {
+            Utils.copyTextBoxContentToClipBoard(this.tBJavaHomePath);
+        }
+
+        private void tBMavenPath_Click(object sender, EventArgs e)
+        {
+            Utils.copyTextBoxContentToClipBoard(this.tBMavenPath);
+        }
+
+        private void tBGradlePath_Click(object sender, EventArgs e)
+        {
+            Utils.copyTextBoxContentToClipBoard(this.tBGradlePath);
         }
     }
 }

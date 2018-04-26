@@ -32,6 +32,7 @@
             this.btnSystemProperties = new System.Windows.Forms.Button();
             this.btnControlPanel = new System.Windows.Forms.Button();
             this.gBSystem = new System.Windows.Forms.GroupBox();
+            this.btnApplicationManager = new System.Windows.Forms.Button();
             this.btnComputerManager = new System.Windows.Forms.Button();
             this.btnDeviceManager = new System.Windows.Forms.Button();
             this.btnSysServices = new System.Windows.Forms.Button();
@@ -39,9 +40,16 @@
             this.gBTool = new System.Windows.Forms.GroupBox();
             this.btnPaint = new System.Windows.Forms.Button();
             this.btnCalc = new System.Windows.Forms.Button();
-            this.btnApplicationManager = new System.Windows.Forms.Button();
+            this.gBEnvironments = new System.Windows.Forms.GroupBox();
+            this.tBMavenPath = new System.Windows.Forms.TextBox();
+            this.lMaven = new System.Windows.Forms.Label();
+            this.lJavaHome = new System.Windows.Forms.Label();
+            this.tBJavaHomePath = new System.Windows.Forms.TextBox();
+            this.lGradleHome = new System.Windows.Forms.Label();
+            this.tBGradlePath = new System.Windows.Forms.TextBox();
             this.gBSystem.SuspendLayout();
             this.gBTool.SuspendLayout();
+            this.gBEnvironments.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSystemProperties
@@ -79,6 +87,16 @@
             this.gBSystem.TabIndex = 2;
             this.gBSystem.TabStop = false;
             this.gBSystem.Text = "系统";
+            // 
+            // btnApplicationManager
+            // 
+            this.btnApplicationManager.Location = new System.Drawing.Point(370, 26);
+            this.btnApplicationManager.Name = "btnApplicationManager";
+            this.btnApplicationManager.Size = new System.Drawing.Size(108, 23);
+            this.btnApplicationManager.TabIndex = 6;
+            this.btnApplicationManager.Text = "卸载/更改程序";
+            this.btnApplicationManager.UseVisualStyleBackColor = true;
+            this.btnApplicationManager.Click += new System.EventHandler(this.btnApplicationManager_Click);
             // 
             // btnComputerManager
             // 
@@ -151,15 +169,71 @@
             this.btnCalc.UseVisualStyleBackColor = true;
             this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
-            // btnApplicationManager
+            // gBEnvironments
             // 
-            this.btnApplicationManager.Location = new System.Drawing.Point(370, 26);
-            this.btnApplicationManager.Name = "btnApplicationManager";
-            this.btnApplicationManager.Size = new System.Drawing.Size(108, 23);
-            this.btnApplicationManager.TabIndex = 6;
-            this.btnApplicationManager.Text = "卸载/更改程序";
-            this.btnApplicationManager.UseVisualStyleBackColor = true;
-            this.btnApplicationManager.Click += new System.EventHandler(this.btnApplicationManager_Click);
+            this.gBEnvironments.Controls.Add(this.tBGradlePath);
+            this.gBEnvironments.Controls.Add(this.lGradleHome);
+            this.gBEnvironments.Controls.Add(this.tBMavenPath);
+            this.gBEnvironments.Controls.Add(this.lMaven);
+            this.gBEnvironments.Controls.Add(this.lJavaHome);
+            this.gBEnvironments.Controls.Add(this.tBJavaHomePath);
+            this.gBEnvironments.Location = new System.Drawing.Point(265, 189);
+            this.gBEnvironments.Name = "gBEnvironments";
+            this.gBEnvironments.Size = new System.Drawing.Size(292, 136);
+            this.gBEnvironments.TabIndex = 4;
+            this.gBEnvironments.TabStop = false;
+            this.gBEnvironments.Text = "环境变量";
+            // 
+            // tBMavenPath
+            // 
+            this.tBMavenPath.Location = new System.Drawing.Point(95, 56);
+            this.tBMavenPath.Name = "tBMavenPath";
+            this.tBMavenPath.Size = new System.Drawing.Size(179, 21);
+            this.tBMavenPath.TabIndex = 3;
+            this.tBMavenPath.Click += new System.EventHandler(this.tBMavenPath_Click);
+            // 
+            // lMaven
+            // 
+            this.lMaven.AutoSize = true;
+            this.lMaven.Location = new System.Drawing.Point(18, 59);
+            this.lMaven.Name = "lMaven";
+            this.lMaven.Size = new System.Drawing.Size(77, 12);
+            this.lMaven.TabIndex = 2;
+            this.lMaven.Text = "Maven Home：";
+            // 
+            // lJavaHome
+            // 
+            this.lJavaHome.AutoSize = true;
+            this.lJavaHome.Location = new System.Drawing.Point(18, 29);
+            this.lJavaHome.Name = "lJavaHome";
+            this.lJavaHome.Size = new System.Drawing.Size(71, 12);
+            this.lJavaHome.TabIndex = 1;
+            this.lJavaHome.Text = "Java Home：";
+            // 
+            // tBJavaHomePath
+            // 
+            this.tBJavaHomePath.Location = new System.Drawing.Point(95, 26);
+            this.tBJavaHomePath.Name = "tBJavaHomePath";
+            this.tBJavaHomePath.Size = new System.Drawing.Size(179, 21);
+            this.tBJavaHomePath.TabIndex = 0;
+            this.tBJavaHomePath.Click += new System.EventHandler(this.tBJavaHomePath_Click);
+            // 
+            // lGradleHome
+            // 
+            this.lGradleHome.AutoSize = true;
+            this.lGradleHome.Location = new System.Drawing.Point(18, 88);
+            this.lGradleHome.Name = "lGradleHome";
+            this.lGradleHome.Size = new System.Drawing.Size(83, 12);
+            this.lGradleHome.TabIndex = 4;
+            this.lGradleHome.Text = "Gradle Home：";
+            // 
+            // tBGradlePath
+            // 
+            this.tBGradlePath.Location = new System.Drawing.Point(95, 85);
+            this.tBGradlePath.Name = "tBGradlePath";
+            this.tBGradlePath.Size = new System.Drawing.Size(179, 21);
+            this.tBGradlePath.TabIndex = 5;
+            this.tBGradlePath.Click += new System.EventHandler(this.tBGradlePath_Click);
             // 
             // frmQuickStart
             // 
@@ -167,15 +241,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(592, 349);
+            this.Controls.Add(this.gBEnvironments);
             this.Controls.Add(this.gBTool);
             this.Controls.Add(this.gBSystem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmQuickStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "快速启动器 v0.3";
+            this.Text = "快速启动器 v0.4";
+            this.Load += new System.EventHandler(this.frmQuickStart_Load);
             this.gBSystem.ResumeLayout(false);
             this.gBTool.ResumeLayout(false);
+            this.gBEnvironments.ResumeLayout(false);
+            this.gBEnvironments.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,6 +271,13 @@
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Button btnPaint;
         private System.Windows.Forms.Button btnApplicationManager;
+        private System.Windows.Forms.GroupBox gBEnvironments;
+        private System.Windows.Forms.Label lJavaHome;
+        private System.Windows.Forms.TextBox tBJavaHomePath;
+        private System.Windows.Forms.Label lMaven;
+        private System.Windows.Forms.TextBox tBMavenPath;
+        private System.Windows.Forms.Label lGradleHome;
+        private System.Windows.Forms.TextBox tBGradlePath;
     }
 }
 

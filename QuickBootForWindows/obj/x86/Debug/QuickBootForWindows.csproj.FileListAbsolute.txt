@@ -5,3 +5,4 @@ C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickB
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.csproj.GenerateResource.Cache
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.exe
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.pdb
+C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.csprojResolveAssemblyReference.cache
