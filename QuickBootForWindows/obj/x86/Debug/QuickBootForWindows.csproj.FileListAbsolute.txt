@@ -6,3 +6,4 @@ C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickB
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.exe
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.pdb
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.csprojResolveAssemblyReference.cache
+C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Debug\QuickBootForWindows.components.fmChooseColor.resources

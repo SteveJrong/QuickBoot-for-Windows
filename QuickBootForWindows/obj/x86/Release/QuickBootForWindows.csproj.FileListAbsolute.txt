@@ -1,5 +1,6 @@
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\bin\Release\QuickBootForWindows.exe
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\bin\Release\QuickBootForWindows.pdb
+C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Release\QuickBootForWindows.components.fmChooseColor.resources
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Release\QuickBootForWindows.frmQuickStart.resources
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Release\QuickBootForWindows.Properties.Resources.resources
 C:\Users\sl0554\documents\visual studio 2010\Projects\QuickBootForWindows\QuickBootForWindows\obj\x86\Release\QuickBootForWindows.csproj.GenerateResource.Cache

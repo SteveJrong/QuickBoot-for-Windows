@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using QuickBootForWindows.common;
+using QuickBootForWindows.components;
 
 namespace QuickBootForWindows
 {
@@ -100,6 +101,12 @@ namespace QuickBootForWindows
         private void tBGradlePath_Click(object sender, EventArgs e)
         {
             Utils.copyTextBoxContentToClipBoard(this.tBGradlePath);
+        }
+
+        private void btnChooseColor_Click(object sender, EventArgs e)
+        {
+            fmChooseColor chooseColor = new fmChooseColor();
+            chooseColor.Show();
         }
     }
 }
